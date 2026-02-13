@@ -295,25 +295,27 @@ body {
 }
 
 .detail-close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
+  position: sticky;
+  top: 12px;
+  float: right;
+  margin: 12px 12px 0 0;
   background: var(--pink);
   color: white;
   border: none;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   cursor: pointer;
   z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .detail-content {
-  padding: 30px 24px;
+  padding: 0 24px 30px;
 }
 
 .detail-content h2 {
@@ -625,16 +627,8 @@ footer {
     right: -100vw;
   }
 
-  .detail-close {
-    top: 12px;
-    right: 12px;
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
-  }
-
   .detail-content {
-    padding: 24px 16px;
+    padding: 0 16px 24px;
     padding-bottom: calc(24px + env(safe-area-inset-bottom));
   }
 
