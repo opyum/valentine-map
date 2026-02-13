@@ -19,6 +19,7 @@ body {
   font-family: 'Lato', sans-serif;
   background: var(--cream);
   color: var(--text);
+  overflow-x: hidden;
 }
 
 header {
@@ -322,6 +323,27 @@ main {
   to { opacity: 0; transform: translateY(20px); }
 }
 
+/* ============ RESPONSIVE - TABLET ============ */
+@media (max-width: 768px) {
+  header {
+    padding: 24px 16px;
+  }
+
+  header h1 {
+    font-size: 1.9rem;
+  }
+
+  main {
+    padding: 20px 14px 50px;
+  }
+
+  .form-section,
+  .photo-section,
+  .list-section {
+    padding: 22px 18px;
+  }
+}
+
 /* ============ RESPONSIVE - MOBILE (iPhone) ============ */
 @media (max-width: 600px) {
   html {
@@ -498,6 +520,13 @@ main {
     font-size: 0.8rem;
   }
 
+  /* Tap highlight */
+  .btn,
+  .back-link,
+  .photo-delete {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   /* Toast */
   .toast {
     bottom: calc(12px + env(safe-area-inset-bottom));
@@ -505,5 +534,17 @@ main {
     left: 12px;
     text-align: center;
     font-size: 0.9rem;
+  }
+}
+
+/* ============ REDUCED MOTION ============ */
+@media (prefers-reduced-motion: reduce) {
+  .toast {
+    animation: none;
+  }
+
+  .admin-place,
+  .btn {
+    transition: none;
   }
 }

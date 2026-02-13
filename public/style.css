@@ -283,6 +283,7 @@ body {
   width: 420px;
   max-width: 90vw;
   height: 100vh;
+  height: 100dvh;
   background: white;
   z-index: 1000;
   box-shadow: -8px 0 40px rgba(0,0,0,0.15);
@@ -312,6 +313,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .detail-content {
@@ -491,8 +493,7 @@ footer {
   }
 
   body {
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
+    /* safe-area handled per-element (hero, footer) to avoid double padding */
   }
 
   /* Hero */
@@ -606,7 +607,12 @@ footer {
     gap: 6px;
     margin-top: 10px;
     scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+
+  .place-card-photos::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
   }
 
   .place-card-photo {
@@ -673,11 +679,12 @@ footer {
   }
 
   .modal-close {
-    top: -8px;
-    right: -4px;
-    width: 40px;
-    height: 40px;
+    top: 8px;
+    right: 8px;
+    width: 44px;
+    height: 44px;
     font-size: 1.5rem;
+    -webkit-tap-highlight-color: transparent;
   }
 
   /* Footer */
@@ -685,6 +692,28 @@ footer {
     padding: 24px 16px;
     padding-bottom: calc(24px + env(safe-area-inset-bottom));
     font-size: 1.1rem;
+  }
+}
+
+/* ============ REDUCED MOTION ============ */
+@media (prefers-reduced-motion: reduce) {
+  .floating-heart {
+    animation: none;
+    display: none;
+  }
+
+  .heart-marker {
+    animation: none;
+  }
+
+  .place-card,
+  .detail-photo,
+  .place-card-photo {
+    transition: none;
+  }
+
+  .detail-panel {
+    transition: none;
   }
 }
 

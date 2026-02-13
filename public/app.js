@@ -19,10 +19,21 @@ const pinIcon = L.icon({
 
 // ============ FLOATING HEARTS ============
 function createFloatingHearts() {
+  // Respect reduced-motion preference
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
   const container = document.getElementById('heartsBg');
   const hearts = ['&#10084;&#65039;', '&#128149;', '&#128151;', '&#128152;', '&#128153;', '&#128155;'];
 
-  setInterval(() => {
+  // Slower on mobile to reduce DOM churn
+  const interval = window.innerWidth <= 480 ? 1500 : 800;
+
+  let heartInterval = setInterval(spawnHeart, interval);
+
+  function spawnHeart() {
+    // Pause when tab is hidden
+    if (document.hidden) return;
+
     const heart = document.createElement('div');
     heart.className = 'floating-heart';
     heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
@@ -32,7 +43,7 @@ function createFloatingHearts() {
     container.appendChild(heart);
 
     setTimeout(() => heart.remove(), 20000);
-  }, 800);
+  }
 }
 
 createFloatingHearts();
