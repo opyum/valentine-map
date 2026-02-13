@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Notre Carte</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header>
+    <h1>Panel Admin</h1>
+    <p>Gestion des lieux de notre histoire</p>
+    <a href="/" class="back-link">Voir la carte publique</a>
+  </header>
+
+  <main>
+    <!-- Add/Edit Form -->
+    <section class="form-section">
+      <h2 id="formTitle">Ajouter un lieu</h2>
+      <form id="placeForm">
+        <input type="hidden" id="editId" value="">
+
+        <div class="form-group">
+          <label for="name">Nom du lieu</label>
+          <input type="text" id="name" placeholder="Ex: Notre premier restaurant" required>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Adresse</label>
+          <div class="address-row">
+            <input type="text" id="address" placeholder="Ex: 15 rue de la Paix, Paris" required>
+            <button type="button" class="btn btn-secondary" onclick="geocodeAddress()">Localiser</button>
+          </div>
+          <small id="geocodeStatus"></small>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="latitude">Latitude</label>
+            <input type="number" id="latitude" step="any" placeholder="48.8566" required>
+          </div>
+          <div class="form-group">
+            <label for="longitude">Longitude</label>
+            <input type="number" id="longitude" step="any" placeholder="2.3522" required>
+          </div>
+        </div>
+
+        <!-- Mini map for preview -->
+        <div id="miniMap" style="height: 350px; border-radius: 12px; margin-bottom: 16px; border: 2px solid #ffb3c6;"></div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" rows="4" placeholder="Raconte notre souvenir ici..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="dateVisited">Date</label>
+          <input type="text" id="dateVisited" placeholder="Ex: 14 fevrier 2024">
+        </div>
+
+        <div class="form-group">
+          <label for="sortOrder">Ordre d'affichage</label>
+          <input type="number" id="sortOrder" value="0" placeholder="0">
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary" id="submitBtn">Ajouter</button>
+          <button type="button" class="btn btn-secondary" onclick="resetForm()" style="display:none" id="cancelBtn">Annuler</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Photo upload (shown after creating a place) -->
+    <section class="photo-section" id="photoSection" style="display:none">
+      <h2>Photos pour: <span id="photoPlaceName"></span></h2>
+      <div class="photo-upload">
+        <input type="file" id="photoInput" multiple accept="image/*">
+        <button class="btn btn-primary" onclick="uploadPhotos()">Uploader les photos</button>
+      </div>
+      <div class="photo-grid" id="photoGrid"></div>
+    </section>
+
+    <!-- Places list -->
+    <section class="list-section">
+      <h2>Tous les lieux (<span id="placeCount">0</span>)</h2>
+      <div id="adminPlacesList"></div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

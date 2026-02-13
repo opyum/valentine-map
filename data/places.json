@@ -1,0 +1,140 @@
+{
+  "places": [
+    {
+      "id": 2,
+      "name": "La rencontre",
+      "address": "Chemin Jean de Bouc 13120 Gardanne",
+      "description": "La où tout à commencer !",
+      "latitude": 43.46278,
+      "longitude": 5.489127,
+      "date_visited": "6 août 2016",
+      "sort_order": 0,
+      "created_at": "2026-02-12T13:29:46.321Z"
+    },
+    {
+      "id": 3,
+      "name": "La première fois",
+      "address": "360 avenue nicolas copernic Aix en provence",
+      "description": "Le premier dodo dans le noir :)",
+      "latitude": 43.489559,
+      "longitude": 5.344725,
+      "date_visited": "6 août 2016",
+      "sort_order": 1,
+      "created_at": "2026-02-13T10:38:01.407Z"
+    },
+    {
+      "id": 4,
+      "name": "Les vacances en Italie !",
+      "address": "Largo Kennedy, 1. Cavenago di Brianza (Lombardie). Italie",
+      "description": "",
+      "latitude": 45.580706,
+      "longitude": 9.416939,
+      "date_visited": "25 mai 2017",
+      "sort_order": 3,
+      "created_at": "2026-02-13T19:37:12.041Z"
+    },
+    {
+      "id": 5,
+      "name": "Pragues",
+      "address": "Vaclavske namesti 45/818,. Prague",
+      "description": "Les meilleures vacances de notre vie !",
+      "latitude": 50.081587,
+      "longitude": 14.42717,
+      "date_visited": "26 octobre 2017",
+      "sort_order": 4,
+      "created_at": "2026-02-13T19:46:01.805Z"
+    },
+    {
+      "id": 6,
+      "name": "Les vacances de la drogue (ou pas)",
+      "address": "Amsterdam",
+      "description": "L'une des rares fois ou tu as apprécie la couleur orange !",
+      "latitude": 52.37308,
+      "longitude": 4.892453,
+      "date_visited": "27 avril 2018",
+      "sort_order": 5,
+      "created_at": "2026-02-13T19:51:50.968Z"
+    }
+  ],
+  "photos": [
+    {
+      "id": 1,
+      "place_id": 4,
+      "filename": "1771011491110-628293985.webp",
+      "original_name": "mainPicture.webp",
+      "created_at": "2026-02-13T19:38:11.112Z"
+    },
+    {
+      "id": 2,
+      "place_id": 4,
+      "filename": "1771011704159-193076689.webp",
+      "original_name": "deverohotelspa_08.webp",
+      "created_at": "2026-02-13T19:41:44.171Z"
+    },
+    {
+      "id": 3,
+      "place_id": 4,
+      "filename": "1771011831426-365048385.webp",
+      "original_name": "deverohotelspa_25.webp",
+      "created_at": "2026-02-13T19:43:51.428Z"
+    },
+    {
+      "id": 4,
+      "place_id": 5,
+      "filename": "1771012038610-569905995.webp",
+      "original_name": "600113464.webp",
+      "created_at": "2026-02-13T19:47:18.614Z"
+    },
+    {
+      "id": 5,
+      "place_id": 5,
+      "filename": "1771012038611-695715009.webp",
+      "original_name": "26645816.webp",
+      "created_at": "2026-02-13T19:47:18.614Z"
+    },
+    {
+      "id": 6,
+      "place_id": 5,
+      "filename": "1771012038612-108903553.webp",
+      "original_name": "471195279.webp",
+      "created_at": "2026-02-13T19:47:18.614Z"
+    },
+    {
+      "id": 7,
+      "place_id": 5,
+      "filename": "1771012038612-836978137.webp",
+      "original_name": "238578508.webp",
+      "created_at": "2026-02-13T19:47:18.614Z"
+    },
+    {
+      "id": 8,
+      "place_id": 5,
+      "filename": "1771012038613-807102086.webp",
+      "original_name": "109705859.webp",
+      "created_at": "2026-02-13T19:47:18.614Z"
+    },
+    {
+      "id": 9,
+      "place_id": 6,
+      "filename": "1771012393317-176040794.jpeg",
+      "original_name": "WhatsApp Image 2026-02-13 at 20.49.51.jpeg",
+      "created_at": "2026-02-13T19:53:13.321Z"
+    },
+    {
+      "id": 10,
+      "place_id": 6,
+      "filename": "1771012393318-394111100.jpeg",
+      "original_name": "WhatsApp Image 2026-02-13 at 20.51.26.jpeg",
+      "created_at": "2026-02-13T19:53:13.321Z"
+    },
+    {
+      "id": 11,
+      "place_id": 6,
+      "filename": "1771012393320-69145601.jpeg",
+      "original_name": "WhatsApp Image 2026-02-13 at 20.51.27.jpeg",
+      "created_at": "2026-02-13T19:53:13.321Z"
+    }
+  ],
+  "nextPlaceId": 7,
+  "nextPhotoId": 12
+}

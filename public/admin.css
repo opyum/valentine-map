@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink: #ff6b8a;
+  --pink-light: #ffb3c6;
+  --pink-dark: #e84570;
+  --cream: #fff5f7;
+  --text: #4a3040;
+  --text-light: #8b6b7b;
+  --green: #28a745;
+  --red: #dc3545;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+}
+
+header {
+  background: linear-gradient(135deg, var(--pink) 0%, var(--pink-dark) 100%);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2rem;
+  margin-bottom: 6px;
+}
+
+header p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: white;
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+.back-link:hover {
+  opacity: 1;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 16px 60px;
+}
+
+/* ============ FORM ============ */
+.form-section {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(232, 69, 112, 0.08);
+  border: 1px solid var(--pink-light);
+}
+
+.form-section h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+  color: var(--pink-dark);
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid var(--pink-light);
+  border-radius: 10px;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--pink);
+}
+
+.form-group small {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.address-row {
+  display: flex;
+  gap: 8px;
+}
+
+.address-row input {
+  flex: 1;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* ============ BUTTONS ============ */
+.btn {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--pink);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--pink-dark);
+}
+
+.btn-secondary {
+  background: var(--pink-light);
+  color: var(--pink-dark);
+}
+
+.btn-secondary:hover {
+  background: var(--pink);
+  color: white;
+}
+
+.btn-danger {
+  background: var(--red);
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #c82333;
+}
+
+.btn-sm {
+  padding: 6px 14px;
+  font-size: 0.85rem;
+}
+
+/* ============ PHOTO SECTION ============ */
+.photo-section {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(232, 69, 112, 0.08);
+  border: 1px solid var(--pink-light);
+}
+
+.photo-section h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+  color: var(--pink-dark);
+  margin-bottom: 16px;
+}
+
+.photo-upload {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.photo-upload input[type="file"] {
+  flex: 1;
+  min-width: 200px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.photo-item {
+  position: relative;
+}
+
+.photo-item img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--pink-light);
+}
+
+.photo-delete {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: var(--red);
+  color: white;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============ LIST ============ */
+.list-section {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 20px rgba(232, 69, 112, 0.08);
+  border: 1px solid var(--pink-light);
+}
+
+.list-section h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+  color: var(--pink-dark);
+  margin-bottom: 20px;
+}
+
+.admin-place {
+  padding: 16px;
+  border: 1px solid var(--pink-light);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  transition: background 0.2s;
+}
+
+.admin-place:hover {
+  background: var(--cream);
+}
+
+.admin-place-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.admin-place-name {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3rem;
+  color: var(--pink-dark);
+}
+
+.admin-place-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.admin-place-info {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.admin-place-photos-count {
+  font-size: 0.8rem;
+  color: var(--pink);
+  margin-top: 4px;
+}
+
+/* ============ TOAST ============ */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  z-index: 1000;
+  animation: slideIn 0.3s ease, fadeOut 0.5s ease 2.5s forwards;
+}
+
+.toast-success { background: var(--green); }
+.toast-error { background: var(--red); }
+
+@keyframes slideIn {
+  from { transform: translateX(100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; transform: translateY(20px); }
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .address-row {
+    flex-direction: column;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notre Histoire d'Amour</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Floating hearts background -->
+  <div class="hearts-bg" id="heartsBg"></div>
+
+  <!-- Header -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Notre Histoire d'Amour</h1>
+      <p class="subtitle">Chaque endroit, un souvenir avec toi</p>
+    </div>
+  </header>
+
+  <!-- Map -->
+  <div class="map-section">
+    <div id="map"></div>
+  </div>
+
+  <!-- Places list -->
+  <section class="places-section">
+    <h2>Nos Endroits</h2>
+    <div class="places-list" id="placesList">
+      <p class="loading">Chargement de nos souvenirs...</p>
+    </div>
+  </section>
+
+  <!-- Photo modal -->
+  <div class="modal" id="photoModal">
+    <div class="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <img id="modalImage" src="" alt="">
+    </div>
+  </div>
+
+  <!-- Place detail panel -->
+  <div class="detail-panel" id="detailPanel">
+    <button class="detail-close" onclick="closeDetail()">&times;</button>
+    <div class="detail-content" id="detailContent"></div>
+  </div>
+
+  <footer>
+    <p>Fait avec tout mon amour, pour toi</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
