@@ -175,6 +175,17 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+// Swipe right to close detail panel (mobile)
+let touchStartX = 0;
+const detailPanel = document.getElementById('detailPanel');
+detailPanel.addEventListener('touchstart', (e) => {
+  touchStartX = e.touches[0].clientX;
+}, { passive: true });
+detailPanel.addEventListener('touchend', (e) => {
+  const diff = e.changedTouches[0].clientX - touchStartX;
+  if (diff > 80) closeDetail(); // swipe right = close
+}, { passive: true });
+
 // ============ UTILS ============
 function escapeHtml(text) {
   if (!text) return '';

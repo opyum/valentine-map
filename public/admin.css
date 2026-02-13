@@ -322,17 +322,188 @@ main {
   to { opacity: 0; transform: translateY(20px); }
 }
 
-/* ============ RESPONSIVE ============ */
+/* ============ RESPONSIVE - MOBILE (iPhone) ============ */
 @media (max-width: 600px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  header {
+    padding: 24px 16px;
+    padding-top: calc(24px + env(safe-area-inset-top));
+  }
+
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  header p {
+    font-size: 0.85rem;
+  }
+
+  main {
+    padding: 16px 10px 40px;
+  }
+
+  /* Form */
+  .form-section {
+    padding: 18px 14px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+  }
+
+  .form-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 12px;
+    font-size: 16px; /* Prevents iOS auto-zoom on focus */
+    border-radius: 8px;
+  }
+
   .form-row {
     grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .address-row {
     flex-direction: column;
+    gap: 8px;
   }
 
-  header h1 {
-    font-size: 1.8rem;
+  .address-row .btn {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  /* Buttons - bigger touch targets */
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .btn-sm {
+    padding: 10px 14px;
+    font-size: 0.85rem;
+  }
+
+  /* Photo section */
+  .photo-section {
+    padding: 18px 14px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+  }
+
+  .photo-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+
+  .photo-upload {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .photo-upload input[type="file"] {
+    min-width: unset;
+    font-size: 16px;
+  }
+
+  .photo-upload .btn {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 8px;
+  }
+
+  .photo-delete {
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
+  }
+
+  /* Places list */
+  .list-section {
+    padding: 18px 14px;
+    border-radius: 14px;
+  }
+
+  .list-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+  }
+
+  .admin-place {
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .admin-place-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .admin-place-name {
+    font-size: 1.15rem;
+  }
+
+  .admin-place-actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+  }
+
+  .admin-place-actions .btn-sm {
+    text-align: center;
+    padding: 10px 8px;
+    font-size: 0.8rem;
+  }
+
+  .admin-place-info {
+    font-size: 0.8rem;
+  }
+
+  /* Toast */
+  .toast {
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    right: 12px;
+    left: 12px;
+    text-align: center;
+    font-size: 0.9rem;
   }
 }

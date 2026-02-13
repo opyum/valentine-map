@@ -430,8 +430,12 @@ footer {
   font-size: 1.3rem;
 }
 
-/* ============ RESPONSIVE ============ */
+/* ============ RESPONSIVE - TABLET ============ */
 @media (max-width: 768px) {
+  .hero {
+    padding: 40px 16px 30px;
+  }
+
   .hero h1 {
     font-size: 2.4rem;
   }
@@ -440,8 +444,13 @@ footer {
     height: 350px;
   }
 
+  .places-section {
+    padding: 30px 16px 40px;
+  }
+
   .places-section h2 {
     font-size: 2rem;
+    margin-bottom: 20px;
   }
 
   .place-card {
@@ -465,10 +474,223 @@ footer {
   .detail-panel {
     width: 100vw;
     max-width: 100vw;
+    right: -100vw;
   }
 
   .detail-photos {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ============ RESPONSIVE - MOBILE (iPhone) ============ */
+@media (max-width: 480px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Hero */
+  .hero {
+    padding: 36px 16px 24px;
+    padding-top: calc(36px + env(safe-area-inset-top));
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero .subtitle {
+    font-size: 0.95rem;
+    letter-spacing: 0;
+  }
+
+  /* Map */
+  #map {
+    height: 55vh;
+    min-height: 280px;
+    max-height: 400px;
+  }
+
+  .leaflet-popup-content-wrapper {
+    border-radius: 12px !important;
+  }
+
+  .leaflet-popup-content {
+    margin: 10px 12px !important;
+    font-size: 0.9rem;
+  }
+
+  .popup-title {
+    font-size: 1.2rem;
+  }
+
+  .popup-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Places section */
+  .places-section {
+    padding: 24px 12px 40px;
+  }
+
+  .places-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+  }
+
+  .places-list {
+    gap: 14px;
+  }
+
+  /* Cards */
+  .place-card {
+    padding: 16px;
+    border-radius: 16px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .place-card:hover {
+    transform: none;
+  }
+
+  .place-card:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 12px rgba(232, 69, 112, 0.12);
+  }
+
+  .place-card-header {
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .place-card-heart {
+    font-size: 1.5rem;
+  }
+
+  .place-card-name {
+    font-size: 1.2rem;
+  }
+
+  .place-card-address,
+  .place-card-desc,
+  .place-card-date,
+  .place-card-photos {
+    padding-left: 0;
+  }
+
+  .place-card-address {
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+  }
+
+  .place-card-desc {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    /* Limit text on mobile */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .place-card-photos {
+    gap: 6px;
+    margin-top: 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .place-card-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    scroll-snap-align: start;
+  }
+
+  .place-card-photo:hover {
+    transform: none;
+  }
+
+  /* Detail panel - full screen on mobile */
+  .detail-panel {
+    width: 100vw;
+    max-width: 100vw;
+    right: -100vw;
+  }
+
+  .detail-close {
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .detail-content {
+    padding: 24px 16px;
+    padding-bottom: calc(24px + env(safe-area-inset-bottom));
+  }
+
+  .detail-content h2 {
+    font-size: 1.6rem;
+    padding-right: 50px;
+  }
+
+  .detail-address {
+    font-size: 0.85rem;
+  }
+
+  .detail-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .detail-photos {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .detail-photo {
+    border-radius: 10px;
+  }
+
+  .detail-photo:hover {
+    transform: none;
+  }
+
+  /* Photo modal */
+  .modal-content {
+    max-width: 95vw;
+    max-height: 95vh;
+    padding: 0 4px;
+  }
+
+  .modal-content img {
+    max-width: 95vw;
+    max-height: 90vh;
+    border-radius: 8px;
+  }
+
+  .modal-close {
+    top: -8px;
+    right: -4px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 24px 16px;
+    padding-bottom: calc(24px + env(safe-area-inset-bottom));
+    font-size: 1.1rem;
   }
 }
 
